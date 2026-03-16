@@ -1,5 +1,21 @@
 aid: microsoft-power-virtual-agents
+name: Microsoft Power Virtual Agents
+description: >-
+  Microsoft Power Virtual Agents (now Copilot Studio) enables building
+  AI-powered conversational chatbots without coding. It provides APIs for
+  integrating bots with custom applications and managing bot configurations
+  programmatically.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Chatbots
+  - Conversational AI
+  - Copilot Studio
+  - Microsoft
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-power-virtual-agents/refs/heads/main/apis.yml
+created: '2024-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
   - aid: microsoft-power-virtual-agents:direct-line-api
     name: Copilot Studio Direct Line API
@@ -7,7 +23,7 @@ apis:
       - Chatbots
       - Conversational AI
       - Direct Line
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://directline.botframework.com/
     humanURL: https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-custom-application
     properties:
@@ -25,8 +41,7 @@ apis:
       - Bot Management
       - Administration
       - Copilot Studio
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    baseURL: https://api.example.com
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://learn.microsoft.com/en-us/microsoft-copilot-studio/
     properties:
       - url: https://learn.microsoft.com/en-us/microsoft-copilot-studio/
@@ -39,14 +54,20 @@ apis:
 common:
   - type: Portal
     url: https://copilotstudio.microsoft.com/
+  - type: Website
+    url: https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio
   - type: Documentation
     url: https://learn.microsoft.com/en-us/microsoft-copilot-studio/
+  - type: Getting Started
+    url: https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-get-started
   - type: Terms of Service
     url: https://www.microsoft.com/en-us/legal/terms-of-use
   - type: Privacy Policy
     url: https://privacy.microsoft.com/en-us/privacystatement
   - type: Support
     url: https://support.microsoft.com/
+  - type: Community
+    url: https://community.powerplatform.com/forums/thread/?threadid=7de87c01-da4e-ef11-9f89-7c1e52206d8b
 maintainers:
-  - name: Kin Lane
+  - FN: Kin Lane
     email: kin@apievangelist.com
