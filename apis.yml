@@ -38,8 +38,8 @@ apis:
   - aid: microsoft-power-virtual-agents:bot-management-api
     name: Copilot Studio Bot Management API
     tags:
-      - Bot Management
       - Administration
+      - Bot Management
       - Copilot Studio
     image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://learn.microsoft.com/en-us/microsoft-copilot-studio/
