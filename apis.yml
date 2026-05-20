@@ -52,6 +52,8 @@ apis:
       can manage topics, entities, authentication settings, and channel
       configurations through Power Platform APIs and Dataverse integration.
 common:
+  - type: GitHubOrganization
+    url: https://github.com/microsoft
   - type: Portal
     url: https://copilotstudio.microsoft.com/
   - type: Website
