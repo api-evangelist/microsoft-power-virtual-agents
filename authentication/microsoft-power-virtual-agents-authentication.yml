@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/microsoft-power-virtual-agents-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearer
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: Direct Line authentication uses either a long-lived secret or a short-lived token.
+    Supply the value in the Authorization header as `Bearer {secret-or-token}`.
+  sources:
+  - openapi/microsoft-power-virtual-agents-openapi.yml

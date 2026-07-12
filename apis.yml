@@ -52,6 +52,12 @@ apis:
       can manage topics, entities, authentication settings, and channel
       configurations through Power Platform APIs and Dataverse integration.
 common:
+  - type: VulnerabilityDisclosure
+    url: security/microsoft-power-virtual-agents-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/microsoft-power-virtual-agents-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-power-virtual-agents-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/microsoft
   - type: Portal
@@ -72,6 +78,8 @@ common:
     url: https://community.powerplatform.com/forums/thread/?threadid=7de87c01-da4e-ef11-9f89-7c1e52206d8b
   - type: Integrations
     url: https://www.microsoft.com/en-us/marketplace
+  - url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=copilot-studio-blog
+    type: Blog
 integrations:
   - name: Microsoft
   - name: Two people looking at a computer.
