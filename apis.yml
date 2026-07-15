@@ -52,6 +52,8 @@ apis:
       can manage topics, entities, authentication settings, and channel
       configurations through Power Platform APIs and Dataverse integration.
 common:
+  - type: AgenticAccess
+    url: agentic-access/microsoft-power-virtual-agents-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/microsoft-power-virtual-agents-vulnerability-disclosure.yml
   - type: DomainSecurity
