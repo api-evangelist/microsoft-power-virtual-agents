@@ -1,0 +1,59 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Copilot Studio Direct Line Conversations Tokens API
+  description: 'Direct Line API 3.0 endpoints used to connect a custom application to a Microsoft Copilot Studio (formerly Power Virtual Agents) agent. The flow: (1) GET the token endpoint exposed by the agent (Mobile app channel) to obtain a Direct Line token, (2) start a conversation against https://directline.botframework.com, (3) post Activity objects to the bot and (4) poll for activities returned by the bot.'
+  version: '3.0'
+servers:
+- url: https://directline.botframework.com
+  description: Direct Line 3.0 service used by Copilot Studio agents
+security:
+- bearer: []
+tags:
+- name: Tokens
+paths:
+  /v3/directline/tokens/generate:
+    post:
+      tags:
+      - Tokens
+      summary: Generate a Direct Line token from a Direct Line secret
+      description: Exchanges a Direct Line secret for a short-lived token. For Copilot Studio agents the token is normally obtained by issuing a GET to the agent-specific token endpoint shown on the Mobile app channel page.
+      operationId: generateDirectLineToken
+      responses:
+        '200':
+          description: Direct Line token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+  /v3/directline/tokens/refresh:
+    post:
+      tags:
+      - Tokens
+      summary: Refresh a Direct Line token
+      operationId: refreshDirectLineToken
+      responses:
+        '200':
+          description: Refreshed token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+components:
+  schemas:
+    TokenResponse:
+      type: object
+      properties:
+        token:
+          type: string
+        expires_in:
+          type: integer
+        conversationId:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Direct Line authentication uses either a long-lived secret or a short-lived token. Supply the value in the Authorization header as `Bearer {secret-or-token}`.
+x-generated-from: https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-custom-application
+x-generated-by: claude-genwave10-08-2026-05-23
