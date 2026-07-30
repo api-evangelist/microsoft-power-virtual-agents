@@ -6,7 +6,20 @@ description: >-
   integrating bots with custom applications and managing bot configurations
   programmatically.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-power-virtual-agents.png
 tags:
   - Chatbots
   - Conversational AI
@@ -17,40 +30,62 @@ created: '2024-01-01'
 modified: '2026-04-28'
 specificationVersion: '0.19'
 apis:
-  - aid: microsoft-power-virtual-agents:direct-line-api
-    name: Copilot Studio Direct Line API
-    tags:
-      - Chatbots
-      - Conversational AI
-      - Direct Line
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://directline.botframework.com/
-    humanURL: https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-custom-application
-    properties:
-      - url: https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-custom-application
-        type: Documentation
-    description: >-
-      The Copilot Studio Direct Line API enables custom applications to
-      communicate with bots built in Microsoft Copilot Studio (formerly
-      Power Virtual Agents). It provides REST endpoints for starting
-      conversations, sending messages, receiving bot responses, and
-      managing conversation sessions for custom channel integrations.
-  - aid: microsoft-power-virtual-agents:bot-management-api
-    name: Copilot Studio Bot Management API
-    tags:
-      - Administration
-      - Bot Management
-      - Copilot Studio
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://learn.microsoft.com/en-us/microsoft-copilot-studio/
-    properties:
-      - url: https://learn.microsoft.com/en-us/microsoft-copilot-studio/
-        type: Documentation
-    description: >-
-      The Copilot Studio management capabilities enable programmatic
-      configuration and deployment of conversational AI agents. Developers
-      can manage topics, entities, authentication settings, and channel
-      configurations through Power Platform APIs and Dataverse integration.
+- aid: microsoft-power-virtual-agents:direct-line-api
+  name: Copilot Studio Direct Line API
+  tags:
+  - Chatbots
+  - Conversational AI
+  - Direct Line
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  baseURL: https://directline.botframework.com/
+  humanURL: >-
+    https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-custom-application
+  properties:
+  - url: >-
+      https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-custom-application
+    type: Documentation
+  description: >-
+    The Copilot Studio Direct Line API enables custom applications to communicate with bots built in Microsoft
+    Copilot Studio (formerly Power Virtual Agents). It provides REST endpoints for starting conversations,
+    sending messages, receiving bot responses, and managing conversation sessions for custom channel integrations.
+- aid: microsoft-power-virtual-agents:bot-management-api
+  name: Copilot Studio Bot Management API
+  tags:
+  - Administration
+  - Bot Management
+  - Copilot Studio
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://learn.microsoft.com/en-us/microsoft-copilot-studio/
+  properties:
+  - url: https://learn.microsoft.com/en-us/microsoft-copilot-studio/
+    type: Documentation
+  description: >-
+    The Copilot Studio management capabilities enable programmatic configuration and deployment of conversational
+    AI agents. Developers can manage topics, entities, authentication settings, and channel configurations
+    through Power Platform APIs and Dataverse integration.
+- aid: microsoft-power-virtual-agents:microsoft-power-virtual-agents-conversations-api
+  name: Microsoft Power Virtual Agents Conversations API
+  description: >-
+    The Conversations API from Microsoft Power Virtual Agents — 3 operation(s) for conversations.
+  humanURL: >-
+    https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-custom-application
+  baseURL: https://directline.botframework.com/
+  tags:
+  - Conversations
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-power-virtual-agents-conversations-api-openapi.yml
+- aid: microsoft-power-virtual-agents:microsoft-power-virtual-agents-tokens-api
+  name: Microsoft Power Virtual Agents Tokens API
+  description: The Tokens API from Microsoft Power Virtual Agents — 2 operation(s) for tokens.
+  humanURL: >-
+    https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-custom-application
+  baseURL: https://directline.botframework.com/
+  tags:
+  - Tokens
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-power-virtual-agents-tokens-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/microsoft-power-virtual-agents-agentic-access.yml
