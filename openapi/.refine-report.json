@@ -1,0 +1,16 @@
+{
+  "provider": "microsoft-power-virtual-agents",
+  "sources": [
+    "microsoft-power-virtual-agents-conversations-api-openapi.yml",
+    "microsoft-power-virtual-agents-tokens-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-power-virtual-agents-conversations-api-openapi.yml",
+    "microsoft-power-virtual-agents-tokens-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
