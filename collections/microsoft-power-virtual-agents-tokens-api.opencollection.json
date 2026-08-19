@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Copilot Studio Direct Line Conversations Tokens API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tokens",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate a Direct Line token from a Direct Line secret",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://directline.botframework.com/v3/directline/tokens/generate"
+          },
+          "docs": "Exchanges a Direct Line secret for a short-lived token. For Copilot Studio agents the token is normally obtained by issuing a GET to the agent-specific token endpoint shown on the Mobile app channel page."
+        },
+        {
+          "info": {
+            "name": "Refresh a Direct Line token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://directline.botframework.com/v3/directline/tokens/refresh"
+          },
+          "docs": "Refresh a Direct Line token"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

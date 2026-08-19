@@ -1,0 +1,461 @@
+{
+  "item": [
+    {
+      "id": "e415affa-036f-4760-ad78-ef87aa2751d2",
+      "name": "Conversations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6cd60542-fe5c-4e8d-b907-72f5138ec4b9",
+          "name": "Start a new conversation with the bot",
+          "request": {
+            "name": "Start a new conversation with the bot",
+            "description": {},
+            "url": {
+              "path": [
+                "v3",
+                "directline",
+                "conversations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a57f7c38-8631-414f-a1da-63e7e6cba1d7",
+              "name": "Conversation created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "directline",
+                    "conversations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"conversationId\": \"string\",\n  \"token\": \"string\",\n  \"expires_in\": 4667,\n  \"streamUrl\": \"https://iUvizRCXhLCDCTRoCXQnLLKBwORVrE.udlnuXJHP62PqMcHztZNswWQbZSJOUxOJ6lN24oJCoAxx++jd2PiMWH\",\n  \"referenceGrammarId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ad004a1a-9b0e-42b7-979c-423901ea19c1",
+          "name": "Reconnect to an existing conversation",
+          "request": {
+            "name": "Reconnect to an existing conversation",
+            "description": {},
+            "url": {
+              "path": [
+                "v3",
+                "directline",
+                "conversations",
+                ":conversationId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "watermark",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "conversationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f4df3252-3572-4365-9720-a9e753ecef3b",
+              "name": "Conversation details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "directline",
+                    "conversations",
+                    ":conversationId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "watermark",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "conversationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"conversationId\": \"string\",\n  \"token\": \"string\",\n  \"expires_in\": 4667,\n  \"streamUrl\": \"https://iUvizRCXhLCDCTRoCXQnLLKBwORVrE.udlnuXJHP62PqMcHztZNswWQbZSJOUxOJ6lN24oJCoAxx++jd2PiMWH\",\n  \"referenceGrammarId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c4dd6fe4-caab-49e0-a5a0-bdeddbf24731",
+          "name": "Retrieve activities from the bot",
+          "request": {
+            "name": "Retrieve activities from the bot",
+            "description": {
+              "content": "Returns the ActivitySet of messages from both the user and the bot. Use the `watermark` query parameter to page through new activities.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "directline",
+                "conversations",
+                ":conversationId",
+                "activities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "watermark",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "conversationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e3f0ee3e-a352-4bf9-89ce-bb47c8d469cc",
+              "name": "ActivitySet",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "directline",
+                    "conversations",
+                    ":conversationId",
+                    "activities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "watermark",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "conversationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"activities\": [\n    {\n      \"type\": \"message\",\n      \"from\": {\n        \"id\": \"string\",\n        \"name\": \"string\"\n      },\n      \"text\": \"string\",\n      \"textFormat\": \"plain\",\n      \"locale\": \"string\"\n    },\n    {\n      \"type\": \"message\",\n      \"from\": {\n        \"id\": \"string\",\n        \"name\": \"string\"\n      },\n      \"text\": \"string\",\n      \"textFormat\": \"plain\",\n      \"locale\": \"string\"\n    }\n  ],\n  \"watermark\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "42b5a318-eb95-4e03-b6e5-5c170611a6b8",
+          "name": "Send an activity to the bot",
+          "request": {
+            "name": "Send an activity to the bot",
+            "description": {},
+            "url": {
+              "path": [
+                "v3",
+                "directline",
+                "conversations",
+                ":conversationId",
+                "activities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "conversationId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"<string>\",\n  \"from\": {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\"\n  },\n  \"text\": \"<string>\",\n  \"textFormat\": \"<string>\",\n  \"locale\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "367e15a1-57ee-4ac3-9679-cf41d7b73f0c",
+              "name": "Resource response with activity id",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "directline",
+                    "conversations",
+                    ":conversationId",
+                    "activities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "conversationId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"message\",\n  \"from\": {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\"\n  },\n  \"text\": \"<string>\",\n  \"textFormat\": \"plain\",\n  \"locale\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://directline.botframework.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b186765e-b22e-41f3-bc1c-bc34b4b3e2c9",
+    "name": "Microsoft Copilot Studio Direct Line Conversations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Direct Line API 3.0 endpoints used to connect a custom application to a Microsoft Copilot Studio (formerly Power Virtual Agents) agent. The flow: (1) GET the token endpoint exposed by the agent (Mobile app channel) to obtain a Direct Line token, (2) start a conversation against https://directline.botframework.com, (3) post Activity objects to the bot and (4) poll for activities returned by the bot.",
+      "type": "text/plain"
+    }
+  }
+}

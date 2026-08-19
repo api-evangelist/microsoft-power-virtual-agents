@@ -1,0 +1,103 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Copilot Studio Direct Line Conversations API",
+    "version": "3.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Conversations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Start a new conversation with the bot",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://directline.botframework.com/v3/directline/conversations"
+          },
+          "docs": "Start a new conversation with the bot"
+        },
+        {
+          "info": {
+            "name": "Reconnect to an existing conversation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://directline.botframework.com/v3/directline/conversations/:conversationId",
+            "params": [
+              {
+                "name": "conversationId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "watermark",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Reconnect to an existing conversation"
+        },
+        {
+          "info": {
+            "name": "Retrieve activities from the bot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://directline.botframework.com/v3/directline/conversations/:conversationId/activities",
+            "params": [
+              {
+                "name": "conversationId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "watermark",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns the ActivitySet of messages from both the user and the bot. Use the `watermark` query parameter to page through new activities."
+        },
+        {
+          "info": {
+            "name": "Send an activity to the bot",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://directline.botframework.com/v3/directline/conversations/:conversationId/activities",
+            "params": [
+              {
+                "name": "conversationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Send an activity to the bot"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
