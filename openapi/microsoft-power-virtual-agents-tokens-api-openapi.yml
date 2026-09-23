@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Microsoft Copilot Studio Direct Line Conversations Tokens API
+  title: Microsoft Copilot Studio Direct Line Tokens API
   description: 'Direct Line API 3.0 endpoints used to connect a custom application to a Microsoft Copilot Studio (formerly Power Virtual Agents) agent. The flow: (1) GET the token endpoint exposed by the agent (Mobile app channel) to obtain a Direct Line token, (2) start a conversation against https://directline.botframework.com, (3) post Activity objects to the bot and (4) poll for activities returned by the bot.'
   version: '3.0'
 servers:
