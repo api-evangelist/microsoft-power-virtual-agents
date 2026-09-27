@@ -102,19 +102,14 @@ paths:
                     type: string
 components:
   schemas:
-    Conversation:
+    ActivitySet:
       type: object
       properties:
-        conversationId:
-          type: string
-        token:
-          type: string
-        expires_in:
-          type: integer
-        streamUrl:
-          type: string
-          format: uri
-        referenceGrammarId:
+        activities:
+          type: array
+          items:
+            $ref: '#/components/schemas/Activity'
+        watermark:
           type: string
     Activity:
       type: object
@@ -136,14 +131,19 @@ components:
           example: plain
         locale:
           type: string
-    ActivitySet:
+    Conversation:
       type: object
       properties:
-        activities:
-          type: array
-          items:
-            $ref: '#/components/schemas/Activity'
-        watermark:
+        conversationId:
+          type: string
+        token:
+          type: string
+        expires_in:
+          type: integer
+        streamUrl:
+          type: string
+          format: uri
+        referenceGrammarId:
           type: string
   securitySchemes:
     bearer:
