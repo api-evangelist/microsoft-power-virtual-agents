@@ -102,15 +102,6 @@ paths:
                     type: string
 components:
   schemas:
-    ActivitySet:
-      type: object
-      properties:
-        activities:
-          type: array
-          items:
-            $ref: '#/components/schemas/Activity'
-        watermark:
-          type: string
     Conversation:
       type: object
       properties:
@@ -124,6 +115,15 @@ components:
           type: string
           format: uri
         referenceGrammarId:
+          type: string
+    ActivitySet:
+      type: object
+      properties:
+        activities:
+          type: array
+          items:
+            $ref: '#/components/schemas/Activity'
+        watermark:
           type: string
     Activity:
       type: object
